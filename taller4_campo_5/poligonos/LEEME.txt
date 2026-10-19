@@ -1,0 +1,35 @@
+CAMPO 5 - PROPUESTA DE PATRONES DE DRENAJE
+
+Se agregan 3 sectores interpretados como dendriticos, con limites aproximados:
+D1: noroeste. D2: centro-oriente. D3: sureste.
+Interpretacion visual de la red y el hillshade aportados por la estudiante.
+No son cuencas calculadas, ni una clasificacion exhaustiva del area.
+No se infiere litologia o fallamiento solo a partir de estos datos.
+
+COMO USAR EN QGIS
+1. Extraer este ZIP.
+2. Arrastrar patrones_campo_5.gpkg a QGIS.
+3. Elegir propuestas_nuevas: son los 3 poligonos verdes nuevos.
+4. originales_sin_modificar es una COPIA de los 4 poligonos originales.
+   No cargarla si ya tienes tus originales y no quieres ver duplicados.
+5. Mantener la red de drenaje por encima de los rellenos.
+6. Revisar los limites sobre tu relieve antes de preparar la entrega.
+
+ALTERNATIVA SHAPEFILE
+Abrir propuestas_nuevas.shp, conservando juntos .shx, .dbf, .prj, .cpg y .qml.
+Los archivos contienen las mismas 3 geometrías que propuestas_nuevas del GPKG.
+
+ALTERNATIVA SIN DESCARGAR CAPAS
+El script crear_en_tu_qgis.py crea las mismas tres geometrías y las guarda en
+un GeoPackage nuevo en la carpeta del proyecto (o carpeta personal si no hay
+proyecto guardado), sin sobrescribir archivos ni modificar capas existentes.
+En QGIS: Complementos > Consola de Python > Mostrar editor. Pegar el código
+del archivo y ejecutarlo. Guardar el proyecto QGIS despues.
+
+CRS: EPSG:32719 - WGS 84 / UTM 19S. Geometrias validadas y sin solapamiento
+con los 4 poligonos existentes. Se asigno este CRS a la COPIA de los originales
+porque faltaba su .prj; coincide con el CRS visible en la captura y los datos.
+La geometria y los atributos originales se conservaron sin cambios.
+
+El PDF de revision es apoyo para revisar, no sustituye la composicion final
+que pide el taller (identificacion, norte, fuentes y otros requisitos).
